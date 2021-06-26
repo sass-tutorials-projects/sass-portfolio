@@ -1,0 +1,49 @@
+// $primary-color: #ca9191;
+$primary-color: #272727;
+// $secondary-color: #ff652f;
+$secondary-color: #f3dbd0;
+$image-color: #74645c;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin setBackgroundImg {
+  background: linear-gradient(
+      to left,
+      rgba($image-color, 0.9),
+      rgba($image-color, 0.3)
+    ),
+    url("../img/sunrise.jpg") center top;
+  background-size: cover;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}

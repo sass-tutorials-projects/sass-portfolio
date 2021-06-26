@@ -1,0 +1,32 @@
+.home {
+  height: 100%;
+  padding-top: 80vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  @include setBackgroundImg;
+  // & represents the parent
+
+  &__name {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid set-text-color($primary-color);
+
+    &--last {
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+
+  .profile-img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 6rem;
+    height: 8rem;
+    border-radius: 4rem;
+    z-index: 1;
+    opacity: 0.5;
+  }
+}
